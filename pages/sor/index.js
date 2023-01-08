@@ -1,15 +1,8 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
+import Link from "next/link";
 
-export default function Home() {
+export default function Sor() {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
+<>
     <header>
       <nav>
         <div className="hMenu">
@@ -49,7 +42,8 @@ export default function Home() {
       <section id="welcome">
         <article className="welcome-card products">
           <h3>Termékeink</h3>
-          <button className="btn">Megnezem</button>
+          
+          <Link href="sor/termekek"><button className="btn">Megnezem</button></Link>
         </article>
 
         <article className="welcome-card brewing">
@@ -168,105 +162,7 @@ export default function Home() {
         </article>
       </section>
     </main>
-    <footer>
-      <section className="footer-menu">
-        <ul className="footer-list">
-          <li>Sütik (cooki) kezelése</li>
-          <li>Adatvédelmi irányelvek</li>
-          <li>Impresszum</li>
-          <li>Kapcsolat</li>
-          <li>Vásárlási feltételek</li>
-        </ul>
-      </section>
-      <section className="soc-icon">
-        <ul>
-          <li>
-            <img
-              className="fa-brands"
-              src="./img/facebook.svg"
-              alt="facebooklogo"
-            />
-          </li>
-          <li>
-            <img className="fa-brands" src="./img/twitter.svg" alt="twitterlogo" />
-          </li>
-          <li>
-            <img
-              className="fa-brands"
-              src="./img/instagram.svg"
-              alt="instagramlogo"
-            />
-          </li>
-          <li>
-            <img className="fa-brands" src="./img/youtube.svg" alt="youtubelogo" />
-          </li>
-        </ul>
-      </section>
-      <p>COPYRIGHT ©2022 CSIBOR</p>
-    </footer>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: borde r-box;
-        }
-      `}</style>
-    </div>
+    </>
+   
   )
 }
